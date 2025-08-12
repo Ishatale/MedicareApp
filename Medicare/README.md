@@ -10,6 +10,10 @@
 ## Installation
 1. Clone the repository:
    ```bash
+HEAD
+
+   git clone https://github.com/Ritam-Vaskar/medCare_Suprathon
+6d0532c (Medicare React (dist) + Spring Boot merged)
    ```
 
 2. Install dependencies:
