@@ -10,7 +10,7 @@ RUN npm install
 COPY Medicare/ ./
 
 # Ensure scripts are executable (vite, react-scripts, etc.)
-RUN chmod +x node_modules/.bin/*
+RUN cd Medicare && chmod +x node_modules/.bin/* && npm run build
 
 # Build React app
 RUN npm run build
