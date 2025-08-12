@@ -15,6 +15,9 @@ RUN chmod +x ./Medicare/node_modules/.bin/vite
 # Build the frontend
 RUN cd Medicare && npm run build
 
+RUN chmod +x ./Medicare/node_modules/.bin/vite
+
+
 # Step 2: Build Spring Boot backend
 FROM maven:3.9.4-eclipse-temurin-21 AS backend
 WORKDIR /app
