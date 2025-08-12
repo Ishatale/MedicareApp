@@ -1,0 +1,387 @@
+.dashboard {
+    padding: var(--spacing-3xl);
+    min-height: 100vh;
+    background: var(--gray-50);
+  }
+  
+  @media (max-width: 1024px) {
+    .dashboard {
+      padding: var(--spacing-2xl);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard {
+      padding: var(--spacing-xl);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .dashboard {
+      padding: var(--spacing-lg);
+    }
+  }
+  
+  .dashboardContainer {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: var(--spacing-2xl);
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 var(--spacing-xl);
+  }
+  
+  @media (max-width: 1200px) {
+    .dashboardContainer {
+      grid-template-columns: 280px 1fr;
+      gap: var(--spacing-xl);
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .dashboardContainer {
+      grid-template-columns: 250px 1fr;
+      padding: 0 var(--spacing-lg);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .dashboardContainer {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-xl);
+      padding: 0 var(--spacing-md);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .dashboardContainer {
+      margin: 1rem auto;
+      padding: 0 var(--spacing-sm);
+    }
+  }
+  
+  .sidebar {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    height: fit-content;
+    box-shadow: var(--shadow-lg);
+    position: sticky;
+    top: calc(var(--spacing-3xl) + var(--navbar-height));
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      position: relative;
+      top: 0;
+      margin-top: 4rem;
+    }
+  }
+  
+  .userProfile {
+    text-align: center;
+    padding-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--gray-100);
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .userProfile h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin: var(--spacing-md) 0 var(--spacing-xs);
+  }
+  
+  .userProfile p {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+  }
+  
+  .profileImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 3px solid var(--primary-blue);
+  }
+  
+  @media (max-width: 1024px) {
+    .profileImage {
+      width: 90px;
+      height: 90px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .profileImage {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
+  .profileImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .dashboardNav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .navButton {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    background: transparent;
+    border: none;
+    color: var(--gray-700);
+    font-weight: 500;
+    transition: all var(--transition-normal);
+    width: 100%;
+    text-align: left;
+  }
+  
+  .navButton i {
+    font-size: 1.25rem;
+    width: 24px;
+  }
+  
+  .navButton:hover {
+    background: var(--gray-50);
+    color: var(--primary-blue);
+  }
+  
+  .navButton.active {
+    background: var(--primary-blue);
+    color: var(--white);
+  }
+  
+  .mainContent {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .contentHeader {
+    margin-bottom: var(--spacing-2xl);
+  }
+  
+  .contentHeader h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--gray-900);
+  }
+  
+  @media (max-width: 768px) {
+    .contentHeader h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contentHeader h2 {
+      font-size: 1.25rem;
+    }
+  }
+  
+  .appointmentsGrid,
+  .recordsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+  }
+  
+  @media (max-width: 1024px) {
+    .appointmentsGrid,
+    .recordsGrid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .appointmentsGrid,
+    .recordsGrid {
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .appointmentsGrid,
+    .recordsGrid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-md);
+    }
+  }
+  
+  .appointmentCard,
+  .recordCard {
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    transition: all var(--transition-normal);
+  }
+  
+  .appointmentCard:hover,
+  .recordCard:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .appointmentCard h4,
+  .recordCard h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin: var(--spacing-sm) 0;
+  }
+  
+  .appointmentHeader,
+  .recordHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .status {
+    // padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  
+  .status.upcoming {
+    // background: var(--primary-blue-light);
+    color: var(--primary-blue);
+  }
+  
+  .status.completed {
+    background: var(--success-light);
+    color: var(--success);
+  }
+  
+  .status.normal {
+    background: var(--success-light);
+    color: var(--success);
+  }
+  
+  .status.review {
+    background: var(--warning-light);
+    color: var(--warning);
+  }
+  
+  .date {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+  }
+  
+  .specialty,
+  .doctor {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .time {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: 0.875rem;
+    color: var(--gray-700);
+  }
+  
+  .time i {
+    color: var(--primary-blue);
+  }
+  
+  .viewButton {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--primary-blue-light);
+    color: var(--primary-blue);
+    border: none;
+    border-radius: var(--radius-lg);
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: var(--spacing-md);
+    transition: all var(--transition-normal);
+  }
+  
+  .viewButton:hover {
+    background: var(--primary-blue);
+    color: var(--white);
+  }
+  
+  .profileSection {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .profileForm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .formGroup label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray-700);
+  }
+  
+  .formGroup input,
+  .formGroup textarea {
+    padding: var(--spacing-md);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    font-size: 1rem;
+    transition: all var(--transition-normal);
+  }
+  
+  .formGroup input:focus,
+  .formGroup textarea:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px var(--primary-blue-light);
+    outline: none;
+  }
+  
+  .formGroup textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .saveButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-xl);
+    background: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-lg);
+    font-weight: 500;
+    transition: all var(--transition-normal);
+  }
+  
+  .saveButton:hover {
+    background: var(--primary-blue-dark);
+    transform: translateY(-2px);
+  }

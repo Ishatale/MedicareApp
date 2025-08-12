@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "name": "Integrity Superspeciality Hospital",
+    "type": "Private",
+    "photo": "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    "location": "Nagpur, India",
+    "address": "05 Vinoba Nagar, Co operative housing society, Dighori, Nagpur 440009",
+    "rating": 4.7,
+    "capacity": 500,
+    "departments": ["Cardiology", "Neurology", "Emergency", "Surgery", "Pediatrics"],
+    "phone": "09801980100",
+    "email": "info@integrity.com"
+  },
+  {
+    "id": 2,
+    "name": "Medical Hospital",
+    "type": "Government",
+    "photo": "https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    "location": "Nagpur, India",
+    "address": "67 Medical Square, Ajni Road, Nagpur, Maharashtra 440009",
+    "rating": 4.5,
+    "capacity": 750,
+    "departments": ["Neurology", "Cardiology", "Oncology", "Orthopedics"],
+    "phone": "+1-555-0456",
+    "email": "contact@metromedical.gov"
+  },
+  {
+    "id": 3,
+    "name": "MediSkin Clinic",
+    "type": "Clinic",
+    "photo": "https://images.pexels.com/photos/3952235/pexels-photo-3952235.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    "location": "Nagpur, India",
+    "address": "178 Ring Road, Opposite NME Digital, Parsodi, Nagpur, Maharashtra 440022",
+    "rating": 4.8,
+    "capacity": 50,
+    "departments": ["Dermatology", "Cosmetic Surgery", "Laser Treatment"],
+    "phone": "08209465263",
+    "email": "info@mediskinclinic.com"
+  },
+  {
+    "id": 4,
+    "name": "NewEra Child Hospital",
+    "type": "Private",
+    "photo": "https://images.pexels.com/photos/1250655/pexels-photo-1250655.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    "location": "Nagpur, India",
+    "address": "35 Chhatrapati square, wardha road, Nagpur , Maharashtra 440015",
+    "rating": 4.9,
+    "capacity": 300,
+    "departments": ["Pediatrics", "Neonatal Care", "Child Surgery", "Emergency"],
+    "phone": "07558305777",
+    "email": "care@nreera.com"
+  }
+]

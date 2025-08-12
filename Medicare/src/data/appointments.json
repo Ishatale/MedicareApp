@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "doctorId": 1,
+    "patientName": "John Doe",
+    "date": "2025-01-15",
+    "time": "10:00 AM",
+    "status": "Confirmed",
+    "reason": "Regular Checkup"
+  },
+  {
+    "id": 2,
+    "doctorId": 3,
+    "patientName": "Jane Smith",
+    "date": "2025-01-16",
+    "time": "2:00 PM",
+    "status": "Pending",
+    "reason": "Skin Consultation"
+  },
+  {
+    "id": 3,
+    "doctorId": 5,
+    "patientName": "Mike Johnson",
+    "date": "2025-01-17",
+    "time": "11:30 AM",
+    "status": "Confirmed",
+    "reason": "Child Vaccination"
+  }
+]

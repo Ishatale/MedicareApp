@@ -1,0 +1,206 @@
+.filtersContainer {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  margin-top: 2rem;
+}
+
+.filtersHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-lg);
+  
+  h3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--gray-900);
+    font-size: 1.1rem;
+    
+    i {
+      color: var(--primary-blue);
+    }
+  }
+}
+
+.clearButton {
+  background: var(--accent-red);
+  color: var(--white);
+  border: none;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  transition: all var(--transition-fast);
+  
+  &:hover {
+    background: #dc2626;
+    transform: scale(1.05);
+  }
+}
+
+.filtersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  
+  label {
+    font-weight: 500;
+    color: var(--gray-700);
+    font-size: 0.875rem;
+  }
+}
+
+.filterSelect {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  color: var(--gray-900);
+  font-size: 0.875rem;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  
+  &:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+  
+  &:hover {
+    border-color: var(--gray-300);
+  }
+}
+
+.rangeSlider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: var(--gray-200);
+  border-radius: 3px;
+  outline: none;
+  transition: background var(--transition-fast);
+  
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-blue);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-fast);
+    
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: var(--shadow-md);
+    }
+  }
+  
+  &::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--primary-blue);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-fast);
+    
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: var(--shadow-md);
+    }
+  }
+  
+  &:hover {
+    background: var(--gray-300);
+  }
+}
+
+// Dark mode styles
+[data-theme="dark"] {
+  .filtersContainer {
+    background: var(--dark-card);
+    border-color: var(--gray-600);
+  }
+  
+  .filtersHeader h3 {
+    color: var(--dark-text);
+    
+    i {
+      color: var(--primary-blue-light);
+    }
+  }
+  
+  .filterGroup label {
+    color: var(--dark-text-muted);
+  }
+  
+  .filterSelect {
+    background: var(--dark-surface);
+    border-color: var(--gray-600);
+    color: var(--dark-text);
+    
+    &:focus {
+      border-color: var(--primary-blue-light);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+    
+    &:hover {
+      border-color: var(--gray-500);
+    }
+  }
+  
+  .rangeSlider {
+    background: var(--gray-600);
+    
+    &::-webkit-slider-thumb {
+      background: var(--primary-blue-light);
+    }
+    
+    &::-moz-range-thumb {
+      background: var(--primary-blue-light);
+    }
+    
+    &:hover {
+      background: var(--gray-500);
+    }
+  }
+}
+
+// Animation for filter changes
+.filtersContainer {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
