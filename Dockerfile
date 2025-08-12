@@ -1,5 +1,5 @@
 # Step 1: Build React frontend
-FROM node:18 AS frontend
+FROM node:20 AS frontend
 WORKDIR /app
 COPY Medicare/package*.json ./Medicare/
 RUN cd Medicare && npm install
